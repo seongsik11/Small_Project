@@ -11,7 +11,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 1200,
-    height: 500,
+    height: 600,
     bgcolor: 'background.paper',
     border: '2px solid #555',
     borderRadius: '8px',
@@ -32,10 +32,20 @@ const Button = styled.div`
 const SmallBox = styled.div`
     position: relative;
       
-    margin-right: 40px;
+    margin-right: 25px;
     width: 300px;
-    height: 370px;
+    height: 400px;
     background-color:#e9e9e9;
+`;
+
+const CloseButton = styled.div`
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    text-align:center;
+    border-radius:30px;
 `;
 
 function ShoppingModalInfo() {
@@ -54,27 +64,27 @@ function ShoppingModalInfo() {
             >
                 <Box sx={style}>
                     <SmallBox>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                            Text in a modal
+                        <Typography id="modal-modal-title" variant="h6" component="h2" align="center">
+                            Style1
                         </Typography>
-                        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            123123
-                        </Typography>
-                    </SmallBox>
-                    <SmallBox>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                            Text in a modal
-                        </Typography>
-                        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            123123
+                        <Typography id="modal-modal-description" align="center" sx={{ mt: 2 }}>
+                            111
                         </Typography>
                     </SmallBox>
                     <SmallBox>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                            Text in a modal
+                        <Typography id="modal-modal-title" variant="h6" component="h2" align="center">
+                            Style2
                         </Typography>
-                        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            123123
+                        <Typography id="modal-modal-description" align="center" sx={{ mt: 2 }}>
+                            222
+                        </Typography>
+                    </SmallBox>
+                    <SmallBox>
+                        <Typography id="modal-modal-title" variant="h6" component="h2" align="center">
+                            Style3
+                        </Typography>
+                        <Typography id="modal-modal-description" align="center" sx={{ mt: 2 }}>
+                            333
                         </Typography>
                     </SmallBox>
                 </Box>

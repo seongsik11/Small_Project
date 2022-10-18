@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styled from "styled-components";
 import "../atoms/Style.css"
+import VideoComponent from "./VideoComponent";
 
 
 
@@ -12,7 +13,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 1200,
-    height: 500,
+    height: 600,
     bgcolor: 'background.paper',
     border: '2px solid #555',
     borderRadius: '8px',
@@ -47,7 +48,9 @@ function ShoppingModalVideo() {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    3 pages
+                    <div style={{position:"absolute", left:"30px"}}>
+                        <VideoComponent/>
+                    </div>
                 </Box>
             </Modal>
         </div>
