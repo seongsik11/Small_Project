@@ -1,0 +1,14 @@
+.btn {
+    color: gray;
+    box-shadow:.1rem .5rem 1.4rem  #d9d9d9;
+    border-radius: 8px;
+    animation-name: keybtn-language;
+    animation-duration: .2s;
+}
+
+.btn:active {
+
+    box-shadow: inset -.3rem -.1rem 1.4rem #f2f2f2, inset .3rem .4rem .8rem #999;
+    border-radius: 8px;
+    cursor: pointer;
+}
