@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import axios from "axios";
 import ShoppingModalInfo from "./ShoppingModalInfo";
-import BasicModal from "../atoms/BasicModal";
 import ShoppingModalCon from "./ShoppingModalCon";
 import ShoppingModalVideo from "./ShoppingModalVideo";
+import {CiYoutube} from "react-icons/ci";
+import {GiClothes} from "react-icons/gi";
+import {MdOutlineFestival} from "react-icons/md";
+
 
 
 function ShoppingInfo(props) {
@@ -26,24 +28,24 @@ function ShoppingInfo(props) {
 
     return (
         <Frame>
-            <Box>
-                <ShoppingModalInfo/>
-            </Box>
-            <Box>
-                <ShoppingModalCon/>
-            </Box>
-            <Box>
-                <ShoppingModalVideo/>
-            </Box>
-            <Box>
-                <ShoppingModalInfo/>
-            </Box>
-            <Box>
-                <ShoppingModalInfo/>
-            </Box>
-            <Box>
-                <ShoppingModalInfo/>
-            </Box>
+            <ItemFrame>
+                <ImgBox style={{top:"60px"}}>
+                    <GiClothes size="10em"/>
+                </ImgBox>
+                <Box>
+                     <ShoppingModalInfo/>
+                </Box>
+
+                <ImgBox style={{top:"100px"}}><MdOutlineFestival size="8em"/></ImgBox>
+                <Box>
+                    <ShoppingModalCon/>
+                </Box>
+
+                <ImgBox style={{top:"100px"}}><CiYoutube size="8em"/></ImgBox>
+                <Box>
+                    <ShoppingModalVideo/>
+                </Box>
+            </ItemFrame>
         </Frame>
     )
 }
@@ -54,12 +56,30 @@ const Frame = styled.div`
     height: 100%;
     background-color: white;
     display:flex;
-    justify-content: center;
+    justify-content: left;
+    
+`;
+
+const ItemFrame = styled.div`
+    position: relative;
+    top:20px;
+    left: 20px;
+    width:325px;
+    height:910px;
+    border: 2px solid black;
+    border-radius: 8px; 
+`;
+
+const ImgBox = styled.div`
+    position:relative;
+    width:325px;
+    height:0px;
 `;
 
 const Box = styled.div`
     position: relative;
-    margin-top: 300px;
+    left:12px;
+    margin-top: 250px;
     margin-right: 100px;
     margin-left: 100px;
     width: 100px;
@@ -70,4 +90,5 @@ const Box = styled.div`
     text-align:center;
     cursor:pointer;
 `;
+
 export default ShoppingInfo;

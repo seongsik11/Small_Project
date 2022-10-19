@@ -12,3 +12,50 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.frame1 {
+    position:absolute;
+    width: 350px;
+    height:35px;
+    line-height: 35px;
+    background-color: #2f2a2a;
+    color:white;
+}
+
+.frame2 {
+    position:absolute;
+    top:465px;
+    width: 344px;
+    height:35px;
+    line-height: 35px;
+    border-top: 3px solid #2f2a2a;
+    border-left: 3px solid #2f2a2a;
+    border-right: 3px solid #2f2a2a;
+    color: #2f2a2a;
+    font-weight: bold;
+}
+
+.frame2:hover {
+    background-color:  #2f2a2a;
+    color: white;
+}
+
+
+.frame3 {
+    position:absolute;
+    top:500px;
+    width: 344px;
+    height:35px;
+    line-height: 35px;
+    border: 3px solid #2f2a2a;
+    border-radius: 0 0 10px 10px;
+    color: #2f2a2a;
+    font-weight: bold;
+}
+
+.frame3:hover {
+    background-color:  #2f2a2a;
+    color: white;
+}
+
+
