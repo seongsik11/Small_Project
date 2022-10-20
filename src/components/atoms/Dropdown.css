@@ -45,17 +45,21 @@
 }
 
 .hover_li {
-    position:absolute;
+    position:relative;
+    top:-5px;
     width: 344px;
     height:35px;
     line-height: 35px;
-    border: 3px solid #2f2a2a;
-    border-radius: 0 0 10px 10px;
+    border-left: 0px;
+    border-left: 3px solid #2f2a2a;
+    border-right: 3px solid #2f2a2a;
+    border-bottom: 3px solid #2f2a2a;
     color: #2f2a2a;
     font-weight: bold;
 }
 
 .hover_li:hover {
-    background-color: #2f2a2a;
+    background-color: #4E4747;
     color:white;
+    cursor: pointer;
 }

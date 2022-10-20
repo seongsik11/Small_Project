@@ -4,7 +4,7 @@ import Modal from '@mui/material/Modal';
 import styled from "styled-components";
 import "../atoms/Style.css"
 import {useState} from "react";
-import DropdownComponent from "./DropdownComponent";
+import DropdownComponent from "../atoms/DropdownComponent";
 
 
 let data = [
@@ -54,7 +54,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 1200,
-    height: 600,
+    height: 635,
     bgcolor: 'background.paper',
     border: '5px solid #555',
     borderRadius: '8px',
@@ -62,7 +62,7 @@ const style = {
     p: 4,
     display: 'flex',
     justifyContent: 'left',
-    overflowX:'auto',
+    overflowX:'auto'
 };
 
 const Button1 = styled.div`
@@ -134,11 +134,11 @@ function ShoppingModalInfo() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} className="className">
                     {data.map((clothes, i) => {
                         return (
-                            <div clothes={clothes} key={i}>
-                            <SmallBox >
+                            <div clothes={clothes} key={i} >
+                            <SmallBox>
                                <img style={{width:"350px", height:"400px"}} alt={clothes.name} src={clothes.image}/>
 
                             </SmallBox>
@@ -155,10 +155,27 @@ function ShoppingModalInfo() {
                         );
                         })
                     }
+                    <Footer>
+                        2020Copyright&copy; Develop Reserved.
+                    </Footer>
                 </Box>
             </Modal>
         </div>
     );
 }
+
+const Footer = styled.div`
+    position: fixed;
+    left:0px;
+    display:flex;
+    justify-content: center;
+    bottom: 0;
+    width: 2314px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #2f2a2a;
+    font-size:12px;
+    color: white;
+`;
 
 export default ShoppingModalInfo;
