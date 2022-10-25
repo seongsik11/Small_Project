@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import styled from "styled-components";
 import ShoppingModalInfo from "./ShoppingModalInfo";
 import ShoppingModalCon from "./ShoppingModalCon";
@@ -6,6 +6,8 @@ import ShoppingModalVideo from "./ShoppingModalVideo";
 import {CiYoutube} from "react-icons/ci";
 import {GiClothes} from "react-icons/gi";
 import {MdOutlineFestival} from "react-icons/md";
+import NewsList from "../atoms/NewsList";
+import Categories from "../atoms/Categories";
 
 
 
@@ -24,7 +26,8 @@ function ShoppingInfo(props) {
     // useEffect(() => {
     //     dataInfo();
     // }, [])
-
+    const [category, setCategory] = useState('all');
+    const onSelect = useCallback((category) => setCategory(category), []);
 
     return (
         <Frame>
@@ -46,6 +49,12 @@ function ShoppingInfo(props) {
                     <ShoppingModalVideo/>
                 </Box>
             </ItemFrame>
+            <NewsBox>
+                <Categories category={category} onSelect={onSelect}/>
+
+
+                <NewsList category={category} />
+            </NewsBox>
         </Frame>
     )
 }
@@ -68,6 +77,10 @@ const ItemFrame = styled.div`
     height:910px;
     border: 2px solid black;
     border-radius: 8px; 
+`;
+
+const NewsBox = styled.div`
+    width: 100%;
 `;
 
 const ImgBox = styled.div`

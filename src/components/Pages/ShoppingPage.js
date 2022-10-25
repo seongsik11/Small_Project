@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useCallback, useState} from "react";
 import ShoppingInfo from "../Templates/ShoppingInfo";
 import styled from "styled-components";
 import BasicModal from "../atoms/BasicModal";
+import Categories from "../atoms/Categories";
+import NewsList from "../atoms/NewsList";
 
 function ShoppingPage() {
+
     return (
         <Frame>
             <Header>LIST</Header>

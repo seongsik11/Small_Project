@@ -91,4 +91,15 @@
     -webkit-box-orient: vertical;
 }
 
+.newsText {
+    position: relative;
+    max-width: 150px;
+    overflow: hidden;
+    float: left;
+    margin: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 
