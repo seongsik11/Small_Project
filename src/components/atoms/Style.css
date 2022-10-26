@@ -65,7 +65,7 @@
 
 
 .a_style {
-    width: 150px;
+    width: 135px;
     height:150px;
     text-decoration: none;
     cursor: pointer;
@@ -83,7 +83,7 @@
     position: relative;
     top: -100px;
     right: -140px;
-    max-width: 150px;
+    max-width: 135px;
     overflow: hidden;
 
     display: -webkit-box;
@@ -100,6 +100,23 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.swiperSlide {
+    display: flex;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    line-height: 300px;
+}
+
+.imgSize {
+    width: 1000px;
+    height: 350px;
+}
+
+.swiper .swiper-pagination-bullet {
+    background-color: #22b8cf;
+
 }
 
 

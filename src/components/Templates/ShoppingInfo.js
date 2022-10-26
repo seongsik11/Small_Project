@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useState} from "react";
 import styled from "styled-components";
 import ShoppingModalInfo from "./ShoppingModalInfo";
 import ShoppingModalCon from "./ShoppingModalCon";
@@ -8,6 +8,7 @@ import {GiClothes} from "react-icons/gi";
 import {MdOutlineFestival} from "react-icons/md";
 import NewsList from "../atoms/NewsList";
 import Categories from "../atoms/Categories";
+import SwiperBanner from "../atoms/SwiperBanner";
 
 
 
@@ -33,27 +34,36 @@ function ShoppingInfo(props) {
         <Frame>
             <ItemFrame>
                 <ImgBox style={{top:"60px"}}>
-                    <GiClothes size="10em"/>
+                    <GiClothes size="10em" color="#22b8cf"/>
                 </ImgBox>
                 <Box>
                      <ShoppingModalInfo/>
                 </Box>
 
-                <ImgBox style={{top:"100px"}}><MdOutlineFestival size="8em"/></ImgBox>
+                <ImgBox style={{top:"100px"}}>
+                    <MdOutlineFestival size="8em" color="#22b8cf"/>
+                </ImgBox>
                 <Box>
                     <ShoppingModalCon/>
                 </Box>
 
-                <ImgBox style={{top:"100px"}}><CiYoutube size="8em"/></ImgBox>
+                <ImgBox style={{top:"100px"}}>
+                    <CiYoutube size="8em" color="#22b8cf"/>
+                </ImgBox>
                 <Box>
                     <ShoppingModalVideo/>
                 </Box>
             </ItemFrame>
+            <SwiperBox>
+            <SwiperBanner/>
+            </SwiperBox>
             <NewsBox>
-                <Categories category={category} onSelect={onSelect}/>
-
-
+                <div style={{position:"sticky"}}>
+                    <Categories category={category} onSelect={onSelect}/>
+                </div>
+                <NewsListBox>
                 <NewsList category={category} />
+                </NewsListBox>
             </NewsBox>
         </Frame>
     )
@@ -71,7 +81,7 @@ const Frame = styled.div`
 
 const ItemFrame = styled.div`
     position: relative;
-    top:20px;
+    top:70px;
     left: 20px;
     width:325px;
     height:910px;
@@ -79,8 +89,27 @@ const ItemFrame = styled.div`
     border-radius: 8px; 
 `;
 
+const SwiperBox = styled.div`
+    position: absolute;
+    top:400px;
+    left: 40em;
+    height:400px;
+  
+`;
+
 const NewsBox = styled.div`
-    width: 100%;
+    position:absolute;
+    right: 128px;
+    width: 900px;
+    height: 100%;
+    overflow-y:auto;
+`;
+
+const NewsListBox = styled.div`
+    position:absolute;
+    width: 900px;
+    height: 100%;
+    overflow-y:auto;
 `;
 
 const ImgBox = styled.div`

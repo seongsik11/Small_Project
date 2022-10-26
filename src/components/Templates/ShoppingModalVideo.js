@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styled from "styled-components";
 import "../atoms/Style.css"
-import VideoComponent from "../atoms/VideoComponent";
+import VideoListComponent from "../Molecules/VideoListComponent";
+import VideoScreenComponent from "../Molecules/VideoScreenComponent";
 
 
 
@@ -48,8 +49,11 @@ function ShoppingModalVideo() {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <div style={{position:"absolute", top:"60px", left:"70px"}}>
-                        <VideoComponent/>
+                    <div style={{position:"absolute", top:"60px", left:"80px"}}>
+                        <VideoScreenComponent/>
+                    </div>
+                    <div style={{position:"absolute", top:"60px", right:"25em"}}>
+                        <VideoListComponent/>
                     </div>
                 </Box>
             </Modal>

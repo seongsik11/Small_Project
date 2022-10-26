@@ -1,4 +1,4 @@
-import VideoComponent from "../atoms/VideoComponent";
+import VideoListComponent from "../Molecules/VideoListComponent";
 import { Row, Col } from 'antd';
 
 function VideoDetailPage(props) {
@@ -8,7 +8,7 @@ function VideoDetailPage(props) {
 
             </Col>
             <Col lg={6} xs={24}>
-                <VideoComponent/>
+                <VideoListComponent/>
             </Col>
         </Row>
     );

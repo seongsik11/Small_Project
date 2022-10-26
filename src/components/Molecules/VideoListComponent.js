@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-function VideoComponent() {
+function VideoListComponent() {
 
     const [sideVideos, setSideVideos] = useState("");
 
@@ -31,12 +31,11 @@ function VideoComponent() {
                 {
                     sideVideos.items && sideVideos.items.map((i, index) => {
                         return (
-                            <div key={index} style={{position:"relative", left:"-200px", display:"flex", justifyContent:"right"}}>
-                                <a href={i.id.videoId} className="a_style">
+                            <div key={index} style={{position:"relative", left:"-250px", display:"flex", justifyContent:"right"}}>
+                                <div className="a_style">
                                 <img src={i.snippet.thumbnails.default.url} alt=""/>
                                     <p className="videoText">{i.snippet.title}</p>
-                                </a>
-
+                                </div>
                             </div>
                         );
                     })
@@ -47,11 +46,10 @@ function VideoComponent() {
 
 const VideoContainer = styled.div`
     position:absolute;
-  
-    width:1193px;
+    width:370px;
     height: 580px;
     overflow-x: auto;
 `;
 
 
-export default VideoComponent;
+export default VideoListComponent;

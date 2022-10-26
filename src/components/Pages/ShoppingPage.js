@@ -1,9 +1,6 @@
-import React, {useCallback, useState} from "react";
+import React from "react";
 import ShoppingInfo from "../Templates/ShoppingInfo";
 import styled from "styled-components";
-import BasicModal from "../atoms/BasicModal";
-import Categories from "../atoms/Categories";
-import NewsList from "../atoms/NewsList";
 
 function ShoppingPage() {
 
@@ -13,7 +10,7 @@ function ShoppingPage() {
             <Section>
                 <ShoppingInfo/>
             </Section>
-            <Footer>FIN</Footer>
+
         </Frame>
     );
 }
@@ -38,13 +35,4 @@ const Section = styled.div`
     background-color: #e9e9e9;
 `;
 
-const Footer = styled.div`
-    position:absolute;
-    bottom: 0;
-    width: 100%;
-    height:50px;
-    background-color: black;
-    color: white;
-    line-height: 50px;
-`;
 export default ShoppingPage;
