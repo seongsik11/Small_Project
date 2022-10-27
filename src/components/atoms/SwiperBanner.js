@@ -12,7 +12,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay])
 
 function SwiperBanner() {
     return (
-        <div style={{position:"relative", top:"-320px", left:"-115px"}}>
+        <div>
             <Swiper
                 className="banner"
                 spaceBetween={50}
@@ -20,12 +20,12 @@ function SwiperBanner() {
                 pagination={{clickable: true}}
                 autoplay={{delay: 3000, disableOnInteraction:false}}
                 speed={1000}
-                style={{width:"1000px", height:"350px"}}
+                style={{width:"950px", height:"350px"}}
             >
-                <SwiperSlide className="swiperSlide"><img className="imgSize" src={slide1} alt="Slide1"/></SwiperSlide>
-                <SwiperSlide className="swiperSlide"><img className="imgSize" src={slide2} alt="Slide2"/></SwiperSlide>
-                <SwiperSlide className="swiperSlide"><img className="imgSize" src={slide3} alt="Slide3"/></SwiperSlide>
-                <SwiperSlide className="swiperSlide"><img className="imgSize" src={slide4} alt="Slide4"/></SwiperSlide>
+                <SwiperSlide className="swiperSlide"><a href="https://kr.investing.com/equities/south-korea" target="_blank"><img className="imgSize" src={slide1} alt="Slide1"/></a></SwiperSlide>
+                <SwiperSlide className="swiperSlide"><a href="https://www.musinsa.com/app/" target="_blank"><img className="imgSize" src={slide2} alt="Slide2"/></a></SwiperSlide>
+                <SwiperSlide className="swiperSlide"><a href="https://ko-kr.facebook.com/facebook/" target="_blank"><img className="imgSize" src={slide3} alt="Slide3"/></a></SwiperSlide>
+                <SwiperSlide className="swiperSlide"><a href="https://toss.im/" target="_blank"><img className="imgSize" src={slide4} alt="Slide4"/></a></SwiperSlide>
             </Swiper>
         </div>
     )

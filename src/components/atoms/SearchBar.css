@@ -1,0 +1,36 @@
+.search {
+    display: flex;
+    position: relative;
+    top: 13px;
+    right: -4.9vw;
+    border-radius: 12px 0 0 12px;
+    border: 3px solid #22b8cf;
+    background-color: white;
+    width: 70%;
+}
+
+.search_bar {
+    width: 70%;
+    height: 25px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+.search:hover {
+    box-shadow: 0 0 7px #22b8cf;
+}
+
+.search_button {
+    position: absolute;
+    top: -2.4px;
+    right: -40px;
+    height: 3.05em;
+    border-radius:0 12px 12px 0;
+    border: 3px solid #22b8cf;
+    background-color: white;
+    color: #22b8cf;
+    font-weight: bold;
+}

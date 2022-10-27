@@ -52,7 +52,7 @@ function ShoppingModalVideo() {
                     <div style={{position:"absolute", top:"60px", left:"80px"}}>
                         <VideoScreenComponent/>
                     </div>
-                    <div style={{position:"absolute", top:"60px", right:"25em"}}>
+                    <div style={{position:"absolute", top:"60px", right:"23em"}}>
                         <VideoListComponent/>
                     </div>
                 </Box>

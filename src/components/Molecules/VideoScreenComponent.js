@@ -3,9 +3,9 @@ import YouTube from "react-youtube";
 import axios from "axios";
 import styled from "styled-components";
 
-function VideoScreenComponent(props) {
+function VideoScreenComponent() {
 
-    const [Videos, setVideos] = useState("");
+    const [videos, setVideos] = useState("");
 
     const dataInfo = async () => {
         await axios.get("https://www.googleapis.com/youtube/v3/search?part=snippet&q=movie&key=AIzaSyALE8i5ioHbPaLZqIvKJf-4m_w4wn8i0HI")
@@ -24,11 +24,12 @@ function VideoScreenComponent(props) {
         dataInfo()
     }, [])
 
-    const i = 1;
+
 
     return (
         <>
             <YouTube
+                key={videos.items.id.videoId}
                 opts={{
                     width: "800px",
                     height: "450px",
@@ -37,10 +38,10 @@ function VideoScreenComponent(props) {
                         modestBranding: 1,
                     },
                 }}
-                videoId={Videos.items}
+                videoId={videos.items.id.videoId}
             />
             <VideoTitle>
-             sdf
+
             </VideoTitle>
         </>
     );

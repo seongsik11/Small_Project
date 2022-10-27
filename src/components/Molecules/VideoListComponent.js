@@ -31,7 +31,7 @@ function VideoListComponent() {
                 {
                     sideVideos.items && sideVideos.items.map((i, index) => {
                         return (
-                            <div key={index} style={{position:"relative", left:"-250px", display:"flex", justifyContent:"right"}}>
+                            <div key={index} style={{position:"relative", left:"-180px", display:"flex", justifyContent:"right"}}>
                                 <div className="a_style">
                                 <img src={i.snippet.thumbnails.default.url} alt=""/>
                                     <p className="videoText">{i.snippet.title}</p>

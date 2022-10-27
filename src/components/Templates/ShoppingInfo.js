@@ -9,6 +9,7 @@ import {MdOutlineFestival} from "react-icons/md";
 import NewsList from "../atoms/NewsList";
 import Categories from "../atoms/Categories";
 import SwiperBanner from "../atoms/SwiperBanner";
+import SearchBar from "../atoms/SearchBar";
 
 
 
@@ -36,6 +37,7 @@ function ShoppingInfo(props) {
                 <ImgBox style={{top:"60px"}}>
                     <GiClothes size="10em" color="#22b8cf"/>
                 </ImgBox>
+
                 <Box>
                      <ShoppingModalInfo/>
                 </Box>
@@ -43,6 +45,7 @@ function ShoppingInfo(props) {
                 <ImgBox style={{top:"100px"}}>
                     <MdOutlineFestival size="8em" color="#22b8cf"/>
                 </ImgBox>
+
                 <Box>
                     <ShoppingModalCon/>
                 </Box>
@@ -50,19 +53,28 @@ function ShoppingInfo(props) {
                 <ImgBox style={{top:"100px"}}>
                     <CiYoutube size="8em" color="#22b8cf"/>
                 </ImgBox>
+
                 <Box>
                     <ShoppingModalVideo/>
                 </Box>
             </ItemFrame>
+
             <SwiperBox>
-            <SwiperBanner/>
+                <SwiperBanner/>
             </SwiperBox>
+
+            <SearchBox>
+                <SearchBar/>
+            </SearchBox>
+            <SearchListBox>
+                    검색 시 보여주는 리스트
+            </SearchListBox>
             <NewsBox>
                 <div style={{position:"sticky"}}>
                     <Categories category={category} onSelect={onSelect}/>
                 </div>
                 <NewsListBox>
-                <NewsList category={category} />
+                    <NewsList category={category} />
                 </NewsListBox>
             </NewsBox>
         </Frame>
@@ -91,25 +103,46 @@ const ItemFrame = styled.div`
 
 const SwiperBox = styled.div`
     position: absolute;
-    top:400px;
-    left: 40em;
+    top:80px;
+    left: 33.5em;
     height:400px;
+    
+`;
+
+const SearchBox = styled.div`
+    position: absolute;
+    top:18vw;
+    right:40.8vw; 
+    width: 1000px;
+ 
+    height: 65px;
+    box-shadow: 0 5px 4px -4px rgba(32, 33, 36, 0.5);
+`;
+
+const SearchListBox = styled.div`
+    position: absolute;
+    width:800px;
+    height:400px;
+    top:560px;
+    right:44.8vw;
+    text-align: left;
   
 `;
 
 const NewsBox = styled.div`
     position:absolute;
-    right: 128px;
-    width: 900px;
+    right: 130px;
+    width: 890px;
     height: 100%;
     overflow-y:auto;
 `;
 
 const NewsListBox = styled.div`
     position:absolute;
-    width: 900px;
+    width: 890px;
     height: 100%;
     overflow-y:auto;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.5);
 `;
 
 const ImgBox = styled.div`
