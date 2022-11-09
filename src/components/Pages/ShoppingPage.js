@@ -6,7 +6,9 @@ function ShoppingPage() {
 
     return (
         <Frame>
-            <Header>LIST</Header>
+            <Header style={{fontSize:"25px"}}>
+                <span style={{color:"lightgray"}}>My Project</span>
+            </Header>
             <Section>
                 <ShoppingInfo/>
             </Section>
@@ -23,7 +25,7 @@ const Frame = styled.div`
 const Header = styled.div`
     width: 100%;
     height: 70px;
-    background-color:black;
+    background-color:#3D3A3A;
     color:white;
     line-height: 70px;
 `;

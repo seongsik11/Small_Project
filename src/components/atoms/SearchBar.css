@@ -34,3 +34,8 @@
     color: #22b8cf;
     font-weight: bold;
 }
+
+.search_button:hover {
+    background-color: #22b8cf;
+    color: white;
+}

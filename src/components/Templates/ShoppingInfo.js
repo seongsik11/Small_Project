@@ -67,7 +67,7 @@ function ShoppingInfo(props) {
                 <SearchBar/>
             </SearchBox>
             <SearchListBox>
-                    검색 시 보여주는 리스트
+                    0
             </SearchListBox>
             <NewsBox>
                 <div style={{position:"sticky"}}>

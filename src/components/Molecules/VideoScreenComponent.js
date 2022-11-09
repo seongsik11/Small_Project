@@ -29,7 +29,7 @@ function VideoScreenComponent() {
     return (
         <>
             <YouTube
-                key={videos.items.id.videoId}
+                key={videos.items}
                 opts={{
                     width: "800px",
                     height: "450px",
@@ -38,7 +38,7 @@ function VideoScreenComponent() {
                         modestBranding: 1,
                     },
                 }}
-                videoId={videos.items.id.videoId}
+                videoId={videos.items}
             />
             <VideoTitle>
 
